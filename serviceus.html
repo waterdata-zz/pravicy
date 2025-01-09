@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+  <style>
+    body,
+    p,
+    img,
+    dl,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    form,
+    blockquote,
+    caption,
+    fieldset,
+    hr,
+    pre,
+    td,
+    th {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font: normal 12px/24px 'Microsoft Yahei', arial, sans-serif;
+      color: #333;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    img {
+      border: 0 none;
+    }
+
+    input,
+    select {
+      vertical-align: middle;
+      border: none
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    s,
+    em,
+    i {
+      font-style: normal;
+      text-decoration: none;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      content: '\20';
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .thide {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .clear {
+      clear: both;
+      height: 0;
+      overflow: hidden
+    }
+
+    /*frame*/
+    body {}
+
+    /* mob */
+    .wrap {
+      position: relative;
+      margin: 0 auto;
+      background-color: transparent;
+      overflow: hidden;
+    }
+
+    /* pc */
+
+    .pc .wrap {
+      position: relative;
+      max-width: 1920px;
+      min-width: 1000px;
+      margin: 0 auto;
+      background-color: transparent;
+    }
+
+
+
+    .container {
+      position: relative;
+      width: 1000px;
+      min-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /*nav*/
+    .nav {
+      position: relative;
+      height: 72px;
+      background-color: #f3f3f3;
+      z-index: 9;
+    }
+
+    .nav-icon {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 92px;
+      height: 92px;
+      background-color: #333;
+      border-radius: 20px;
+      border: #fff solid 4px;
+      overflow: hidden;
+    }
+
+    .nav-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .nav-gamename {
+      position: absolute;
+      top: 29px;
+      left: 130px;
+      font-size: 24px;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 29px;
+      right: 0;
+      font-size: 16px;
+    }
+
+    .nav-menu li {
+      float: left;
+    }
+
+    .nav-menu li a {
+      display: block;
+      width: 120px;
+      height: 38px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .nav-menu li a:hover {
+      border-bottom: 3px solid #4abbfc;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .nav-menu li.separate {
+      color: #000000;
+      margin: 5px 10px;
+      width: 1px;
+      height: 14px;
+    }
+
+    .nav-fixed {
+      position: fixed;
+    }
+
+
+
+    /*privacy*/
+    .commontext {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* pc */
+    .pc .commontext {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    .commontext-title {
+      padding-top: 5px;
+      line-height: 34px;
+      font-size: 18px;
+    }
+
+    .commontext-con {
+      color: #000000;
+      line-height: 160%;
+      font-size: 12px;
+      padding: 0 10px 10px 10px;
+      margin: 0px 15px 10px 15px;
+      box-sizing: border-box;
+    }
+
+    /* pc */
+    .pc .commontext-con {
+      color: rgb(0, 0, 0);
+      line-height: 30px;
+      font-size: 14px;
+    }
+
+    .commontext-con strong {
+      font-weight: bold;
+    }
+
+    /* mob */
+    .commontext-con p {
+      text-indent: 28px;
+
+    }
+
+    /* pc */
+    .pc .commontext-con p {
+      text-indent: 28px;
+
+    }
+
+    /*footer*/
+    .footer {
+      position: relative;
+      background-color: #353535;
+      height: 250px;
+    }
+
+    .footer-arrow {
+      height: 14px;
+      padding-bottom: 41px;
+    }
+
+    .footer-arrow div {
+      border: #dcdcdc solid 14px;
+      border-bottom: none;
+      box-sizing: border-box;
+    }
+
+    .footer-arrow .a1 {
+      width: 70%;
+      position: absolute;
+      left: 0;
+      border-right-color: transparent !important;
+    }
+
+    .footer-arrow .a2 {
+      width: 30%;
+      position: absolute;
+      right: 0;
+      border-left-color: transparent !important;
+    }
+
+    .footer-contact {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 36px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .footer-contact-title {
+      font-size: 18px;
+    }
+
+    .footer-qrcode {
+      position: absolute;
+      right: 41px;
+      width: 110px;
+      height: 110px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    .footer-qrocde .qrcode {
+      width: 110px;
+      height: 110px;
+    }
+  </style>
+  <title>Terms of Use</title>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <!--privacypolicy-->
+    <div class="commontext">
+      <a name="section-privacypolicy"></a>
+      <h1 class="commontext-title" style="text-align:center;"></h1>
+      <div class="commontext-con">
+
+        <nbsp></nbsp>
+        <p style="text-align: center"><strong>Terms of Use</strong></p>
+        <nbsp></nbsp>
+        <p  style="text-align: center">Date: [8&nbsp;October  2023]</p>
+        <p>[LePlus LIMITED]&nbsp;(&ldquo;LePlus&rdquo; or &ldquo;we&rdquo;) is a game developer that provides games, features, content and services to users via websites, mobile applications and other channels or portals (the &ldquo;Services&rdquo;).</p>
+        <ol>
+          <li><strong><strong>Acceptance of Terms</strong></strong></li>
+        </ol>
+        <p>By accessing and using our Services, you consent to the terms and conditions in these&nbsp;Terms of Use (the &ldquo;Terms&rdquo;).</p>
+        <ol start="2">
+          <li><strong><strong>Eligibility for Using Services</strong></strong>
+            <ul>
+              <li>The Services are designed and provided to users of various age groups and please see the instructions for eligibility when users download and use a specificService.&nbsp;If you are between the ages of 13 and 18 (or the relevant age defined as a minor in your jurisdiction), you should seek the consent of your parents or legal guardians before using our Services.</li>
+              <li>If parents or legal guardians consider that the Services are not suitable for their children, please contact us at [jiaoheng@gmail.com]and we will respond to your requests and take actions we consider appropriate.</li>
+            </ul>
+          </li>
+          <li><strong><strong>Services</strong></strong>
+            <ul>
+              <li>LePlus provides users with the following Services:
+                <ul>
+                  <li>games, features, content and contests;</li>
+                  <li>customer services; and</li>
+                  <li>other services offered by LePlus from time to time.</li>
+                </ul>
+              </li>
+              <li>Some of the Services are provided free of charge and users may choose to pay fees for certain functions and features of the Services.</li>
+            </ul>
+          </li>
+          <li><strong><strong>User Account</strong></strong>
+            <ul>
+              <li>For certain Services, users may be required to register an account in order to use those Services.</li>
+              <li>If users register an account with us, users shall
+                <ul>
+                  <li>provide accurate, complete, and up-to-date information when creating an account and communicating with LePlus.</li>
+                  <li>take appropriate measures to ensure the security of the account and password.</li>
+                  <li>assume full responsibility for all actions made or not made in relation to the use of their accounts.</li>
+                  <li>not use the account of any other user.</li>
+                  <li>contact LePlus immediately if users discover any security concerns regarding their accounts, for example, password leakage.</li>
+                </ul>
+              </li>
+              <li>Users&rsquo; accounts may be suspended,cancelled or closed if
+                <ul>
+                  <li>requested by the users;</li>
+                  <li>the accounts have been inactive for more than six months; or</li>
+                  <li>users violate the Terms.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <ol start="5">
+          <li><strong><strong>Purchase and Refunds</strong></strong>
+            <ul>
+              <li>Users may pay fees for certain functions and features of the Services, including virtual items and ads-free services, and users understand and agree that due to the nature of our Services, purchase of those functions and features are non-refundable. If users consider that fees should be refunded under exceptional circumstances, please contact us and we will consider the request on a case-by-case basis.</li>
+              <li>Users understand that users may only use the virtual items in the games and virtual items have no real-world value and cannot be redeemed for actual currency, goods or other items of monetary value.</li>
+              <li>Virtual items include virtual coins, points, props, and other in-game things related to the functions and features of the Services.</li>
+            </ul>
+          </li>
+          <li><strong><strong>Users&rsquo; Conduct</strong></strong>
+            <ul>
+              <li>Users shall use the Services in a lawful, fair and reasonable manner.</li>
+              <li>In using the Services, users may not
+                <ul>
+                  <li>interfere with, damage or disrupt any part of our Services;</li>
+                  <li>transmit or upload viruses and harmful programs;</li>
+                  <li>copy, reproduce or sell any part of our Services; and</li>
+                  <li>infringe the intellectual property rights and legitimate interests of any person.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <ol start="7">
+          <li><strong><strong>Third-party Links and Services</strong></strong>
+            <ul>
+              <li>The Services may include links to third-party websites, plug-ins and applications. Clicking on those links may allow users to visit the websites and applications of third parties. Use of third-party websites, services and products will be governed by the terms of service between users and third parties, and LePlus assumes no responsibility for the use of third-party websites, services and products.</li>
+              <li>Users should read the privacy policies on third-party websites and applications to know how they collect and use personal data of users.</li>
+            </ul>
+          </li>
+          <li><strong><strong>Intellectual Property Rights</strong></strong></li>
+        </ol>
+        <p>All intellectual property rights, including trademarks, patents, copyrights and other kinds of intellectual property rights, whether registrable or not, in relation to all the trade or business names, domain names, logos, content, layout, text and graphics, source codes, algorithms, software, database, applications, content and information of our Services are legally owned or acquired by LePlus.</p>
+        <ol start="9">
+          <li><strong><strong>Disclaimer and Limitation of Liability</strong></strong>
+            <ul>
+              <li>Users acknowledge and understand that LePlus cannot guarantee a 100% safe operating environment, and LePlus &nbsp;assumes no liability of whatsoever nature arising out of any failure, interruption and discontinuance of the Services due to the limitation of internet communication technologies and events of force majeure, attacks, viruses worms and malicious codes, system vulnerability, failure of third-party services and other factors which are beyond the control of LePlus.</li>
+              <li>To the extent permitted by applicable law, LePlus will not be responsible for any loss of profits, revenues, or indirect, special, consequential, or punitive damages.</li>
+            </ul>
+          </li>
+          <li><strong><strong>Personal Data Protection</strong></strong></li>
+        </ol>
+        <p>Please refer to our Privacy Policy&nbsp;<em><em>[</em></em><strong><em><strong><em><a id="returnPrivacyus">please insert link</a></em></strong></em></strong><em><em>]</em></em><em><em>&nbsp;</em></em>for information on how we collect, use and share your data.</p>
+        <ol start="11">
+          <li><strong><strong>Indemnity</strong></strong></li>
+        </ol>
+        <p>Users shall defend and indemnify LePlus&nbsp;and its affiliates, directors, officers, employees, and users against all liabilities, damages, losses, costs, fees (including legal fees) and expenses relating to claims arising from or in connection with the violation of the Terms by users.</p>
+        <ol start="12">
+          <li><strong><strong>Termination</strong></strong>
+            <ul>
+              <li>Users may stop using the Services at any time with or without notice.</li>
+              <li>We may terminate the Terms if
+                <ul>
+                  <li>users violate the Terms, or</li>
+                  <li>the Services are no longer available to users.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <ol start="13">
+          <li><strong><strong>Governing Law and Dispute Resolution</strong></strong>
+            <ul>
+              <li>The Terms shall be governed and construed by the laws of china.</li>
+              <li>We will endeavor to resolve disputes with users under the Terms through amicable consultation. If a dispute cannot be resolved through consultation within 30 days, either party may submit the dispute for arbitration at the Beijing International Arbitration Center  in accordance with the beijing Administered Arbitration Rules in effect at the time of applying for arbitration. The place of arbitration shall be in Beijing. The language of the arbitration shall be English. The arbitral award shall be final and binding upon you and LePlus.</li>
+            </ul>
+          </li>
+          <li><strong><strong>Miscellaneous</strong></strong>
+            <ul>
+              <li>Interpretation</li>
+            </ul>
+          </li>
+        </ol>
+        <p>Headings are for reference purposes only and in no way limit the scope or extent of each section and shall not affect the meaning of the language in each section.</p>
+        <ul>
+          <li>Notice</li>
+        </ul>
+        <p>Users shall send all the communications and correspondence to LePlus&nbsp;to [jiaoheng20@gmail.com].</p>
+        <ul>
+          <li>Severability</li>
+        </ul>
+        <p>If for any reason any provision of the Terms becomes unenforceable, that provision will be enforced to the maximum extent permitted so as to give effect to the intent of the Terms, and the remainder of the Terms will remain in full force and effect.</p>
+        <ul>
+          <li>Amendment</li>
+        </ul>
+        <p>The Terms may be amended from time to time, and we will notify users by publishing an updated Terms on the websites, mobile applications and channels or portals to which users have access.</p>
+        <ul>
+          <li>Assignment</li>
+        </ul>
+        <p>Users may not assign or transfer any rights and obligations under the Terms without LePlus&rsquo;s prior written consent.</p>
+        <p>LePlus&nbsp;may assign or transfer its rights and obligations under the Terms by publishing a notice on the websites, mobile applications and channels or portals to which users have access to.</p>
+        <ul>
+          <li>Waiver</li>
+        </ul>
+        <p>The failure by users or LePlus&nbsp;to enforce any provision of the Terms will not constitute a waiver of future enforcement of that or any other provision.</p>
+        <p>&nbsp;</p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- 判断设备 -->
+  <script type="text/javascript">
+    function browserRedirect() {
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        //移动设备
+      } else {
+        //pc
+        document.getElementsByTagName('body')[0].className = 'pc'; //设置为新的
+      }
+    }
+
+    browserRedirect();
+    function returnMessage(){
+      window.top.postMessage('ret')
+    }
+    document.getElementById('returnPrivacyus').addEventListener('touchstart',function(){
+
+    },false)
+    document.getElementById('returnPrivacyus').addEventListener('touchend',function(){
+      returnMessage()
+    },false)
+    document.getElementById('returnPrivacyus').addEventListener('click',function(){
+      returnMessage()
+    },false)
+
+
+  </script>
+
+
+
+
+
+</body></html>

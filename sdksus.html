@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=2,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <title>SDK List</title>
+    <meta name="Keywords" content="sdk list">
+    <style>
+        @media (orientation: landscape){
+            body{-webkit-text-size-adjust:100%;}
+        }
+        body{
+            color: #333;
+            margin: 0 0 20px;
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: justify;
+        }
+        #container{max-width: 1400px; margin: 0 auto;}
+        p{
+            margin: 10px 0;
+        }
+        a{
+            color: #025feb;
+        }
+        .logo-box{
+            width: 100%;
+            height: 30px;
+            padding: 20px 0 10px;
+        }
+        .logo{
+            width: 150px;
+            height: 30px;
+            position: fixed;
+            left: 10px; top: 16px;
+        }
+        .logo span{
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 0;
+            height: 0;
+            -webkit-transition: opacity .3s ease;
+            transition: opacity .3s ease;
+            opacity: 0;
+        }
+        .logo img{
+            display: block;
+            height: 100%;
+            -webkit-transition: width 0.3s ease, height 0.3s ease;
+            -moz--webkit-transition: width 0.3s ease, height 0.3s ease;
+            -ms--webkit-transition: width 0.3s ease, height 0.3s ease;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+        .logo.on{
+            position: fixed;
+            width: 100%;
+            padding: 10px 0;
+            height: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+        }
+        .logo.on img{
+            padding: 0 10px;
+            -webkit-transition: width 0.3s ease, height 0.3s ease;
+            -moz--webkit-transition: width 0.3s ease, height 0.3s ease;
+            -ms--webkit-transition: width 0.3s ease, height 0.3s ease;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+        .logo.top span{
+            padding: 0 10px;
+            margin-left: 120px;
+            opacity: 1;
+            width: auto;
+            height: auto;
+            border-left: 1px solid #dedede;
+        }
+        .logo.top img{
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100px;
+            height: 20px;
+            transition: none;
+        }
+        .page-title{
+            font-size: 20px;
+            margin-top: 20px;
+            padding-bottom: 5px;
+        }
+        .update-time{
+            color: #B0B2BC;
+        }
+        .page-border{
+            border: 1px solid #CECECE;
+            padding: 0 16px;
+            border-radius: 4px;
+        }
+        table{
+            table-layout: fixed;
+            word-wrap:break-word;
+            border-collapse: collapse;
+            border: none;
+            border:1px solid #e0e0e0;
+            margin-bottom: 10px;
+        }
+        table tr{
+            border:1px solid #e0e0e0;
+        }
+        table td{
+            padding: 0 5px;
+            border:1px solid #e0e0e0;
+            text-align: center;
+        }
+        .page-border{
+            padding: 0 6px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="wrap bgWhite pt20 pb20">
+        <div class="area w920">
+
+            <div class="about page-border">
+<p align="center" class="page-title"><strong>SDK List</strong></p>
+<table cellspacing="0" cellpadding="0" width="100%" >
+    <tbody>
+        <tr>
+
+        </tr>
+        <tr bgcolor="#f4f4f4">
+
+            <td>
+                <p>
+                    <strong><span>Name of SDK</span></strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong><span>What will be collected?</span></strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong><span>SDK Developer</span></strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong><span>Purpose</span></strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong><span>Links to third-party SDK privacy policies</span></strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <p>
+                    <span>Adjust</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Traffic data,Location,Server logs,IP address, operating system,</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Bugsnag is an advertising service provided by Smartbear. (US)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising  analytics</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a   ><span>https://www.adjust.com/terms/privacy-policy/</span></a>
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+
+            <td>
+                <p>
+                    <span>Facebook Audience Network</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>The devices and software you are currently using,What you do on your device,Identifier that distinguishes your device from other users'devices, Information you share with us through device settings as GPS location, camera access, photos, your IP address.
+
+</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Facebook Audience Network is an advertising service provided by Facebook, Inc. (US) that may collect or receive information from our apps and other apps and use that information to provide measurement services and targeted ads. Facebook does not require opt-in or opt-out signals from users in our services. Relevant signals are collected directly from the user upon creating an account in such Services.</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising  analytics</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a   ><span>    https://www.facebook.com/about/privacy/</span></a>
+                </p>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <p>
+                    <span>AppLovin and Applovin MAX</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Device make, model, and operating system;
+Device properties related to screen size, orientation, audio, battery, device memory usage, settings, and boot time;
+Device settings related to accessibility features, font size, theme;
+Carrier;
+Operating system;
+Name and properties of mobile application through which a consumer interacts with the Services;
+Country, time zone, and locale settings (country and preferred language);
+City- and/or country-level or other coarse geolocation data;
+Network connection type and speed;
+IP Address;
+Internet browser user-agent used to access the Services;
+HTTP header information;
+Advertising IDs (IDFA/GAID/Amazon FOSAID);
+Vendor IDs (IDFV); and
+Advertising and tracking preferences and restrictions.</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>AppLovin is an advertising service provided by AppLovin Corporation. (US)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.applovin.com/privacy</span></a>
+                </p>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <p>
+                    <span>inmobi</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>"iOS devices’ Identifier for Advertising (IDFA) and iOS Identifier for Vendors (IDFV),Google Advertising ID (GAID), Android ID ,Identifier for Advertising on OTT and CTV platforms,mobile equipment identity (IMEI),  Cookie IDs.
+Mobile carrier,Network provider or ISP,Network type ,IP address,IDs of WiFi access points to which your device is connected
+Date and time of connection,App or site name or version,App identifier,SDK version,API key identifier.
+Device type,Device startup time and update time,Device name,Screen size,Memory and hard drive capacity,Operating system and version.
+Mobile browser used ,Language settings (including country code) and time zone.
+The content type of the ad ,The ad type ,Where the ad is being served."</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>InMobi is an advertising service provided by InMobi PTE Ltd (Singapore)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.inmobi.com/privacy-policy/</span></a>
+                </p>
+            </td>
+
+        </tr>
+
+        
+        <tr>
+            <td>
+                <p>
+                    <span>unityads</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>unique device identifiers ; IP address; country of install ; device manufacturer and model platform type and the operating system and version running on your system or device; CPU information; the graphics card type and vendor name; graphics card driver name and version ;  amount of system and video RAM present;  application or bundle identification (“app ID”) of the game installed; unique advertising identifiers provided for iOS and Android devices (e.g., IDFA or Android Ad ID).</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Unity Ads is an advertising service provided by Unity Ads Inc. (US)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://unity3d.com/legal/privacy-policy</span></a>
+                </p>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <p>
+                    <span>ironsource</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>"Identifiers: Advertising ID, IP address, and a self-created ID unique to a specific app, and IDs unique only to apps of the same developer,ID For Advertising (“IDFA”).
+Technical information such as the device’s time zone, the amount of free memory on the device, the name and version of the app to which the ad is served, battery status, operating system name and version,  the language of the operating system, the name of the mobile carrier, internet connection type (e.g. WiFi), etc.
+An indication if an ad was viewed, or clicked, or if there was an install of an advertised app. Information about actions performed within an advertiser’s app following such an install."</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>IronSource is an advertising service provided by IronSource, Inc. (US) and does not require opt-in or opt-out signals from users in our Services, since they provide only non-personalized ads in our Services.</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/</span></a>
+                </p>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <p>
+                    <span>mintegral</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>"IMEI, Android ID, OAID, IDFV, IDFA or GAID.
+device make, device model, information of operating system, device type, information of screen, information of battery, device volume and font size, whether the it is an emulator, information of network, information of hardware, information of device sensor, system boot time, device user name, information of storage capacity.
+package name of the app of Mintegral’s Business Partners, whether it is downloaded from App Store, version and characteristic of the app used by you when you interact with Mintegral’s Service, SDK version, list of installed apps.
+information about your interaction with  ads, timestamp, device event information such as crashes, system activity, the date and time of your request and referral URL, user-agent."</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Mintegral is provided by Mintegral International Limited(China)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.mintegral.com/en/privacy/</span></a>
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+
+            <td>
+                <p>
+                    <span>vungle</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Information about your device, such as the type and model, manufacturer, operating system, carrier name, time zone, network connection type (e.g., Wi-Fi, cellular), IP address, Vungle SDK version, and identifiers assigned to your device, such as its iOS Identifier for Advertising (IDFA), Android Advertising ID (AAID or GAID).</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Vungle is provided by Vungle, Inc. (US)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://vungle.com/privacy/</span></a>
+                </p>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+
+            <td>
+                <p>
+                    <span>Pangle</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Identifiers and device information. We automatically log your IP address and collect information regarding the device you are using to visit the Pangle website such as the model of your device, your browser information, system language setting, your screen resolution and operating system.</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Pangle is provided by ByteDance Pte. Ltd. (Singapore)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.pangleglobal.com/privacy</span></a>
+                </p>
+            </td>
+
+        </tr>
+         <tr>
+
+            <td>
+                <p>
+                    <span>bigo</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>device make, device model, operating system (e.g. iOS) and the OS version of the 
+device, device type (e.g. smartphone, tablet, etc.), screen size, orientation and 
+battery, carrier information, version and characteristic of the app used by you 
+when you interact with BigoAds’s Service, country, time zone and locale settings 
+(country and preferred language), network connection type, IP address, SDK 
+version, timestamp, network status such as WiFi, mobile advertising identifier 
+(e.g. Apple IDFA or Google advertising ID), device event information such as 
+crashes, system activity, hardware settings</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span> BIGO TECHNOLOGY PTE LTD</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.bigossp.com/agreement/privacyPolicy</span></a>
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+
+            <td>
+                <p>
+                    <span>fyber</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Device type and model, network provider, browser type, language,application package name, key words, version, operation system,Advertising ID (Apple IDFA or Google AAID),IP address, network connection type and device GPS location,User’s Information.</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Fyber is an advertising service provided by Fyber Group. (Israel)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.fyber.com/services-privacy-statement/</span></a>
+                </p>
+            </td>
+
+        </tr>
+                <tr>
+
+            <td>
+                <p>
+                    <span>Topon</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>device manufacturer, device model, CPU model, sensor (accelerometer sensor or gyro-sensor of device), resolving power, device operating system (e.g. iOS) and operating system version, device type (e.g. smartphone, tablet, device model, device manufacturer etc.), device screen size, device screen orientation, carrier data, application version and features of the mobile application used by the user to use the TopOn Services, country, MCC(mobile country code), MNC(mobile network code), startup times, time zone and regional settings (country and region). Time zone and regional settings (country and preferred system language), type of network connection, IP address, SDK version, timestamp, network status such as WiFi, mobile advertising identifier (e.g. Apple IDFA or Google Advertising ID), device event data such as system crash, date and time of your request and source URL, user-agent, TopOn partner's application package name, package version, IDFV. we or our business partners may also collect International Mobile Device Identifier (IMEI, MAC address, OAID), Android ID</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Topon is an advertising service provided by Topon Group. (China)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.toponad.com/en/privacy-policy</span></a>
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+
+            <td>
+                <p>
+                    <span>adcolony</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Device type and model, network provider, browser type, language,application package name, key words, version, operation system,Advertising ID (Apple IDFA or Google AAID),IP address, network connection type and device GPS location,User’s Information.</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>
+</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://www.adcolony.com/privacy-policy/</span></a>
+                </p>
+            </td>
+
+        </tr>
+        <tr>
+
+            <td>
+                <p>
+                    <span>chartboost</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>"Bundle ID, language ID, operating system version, device model, software developer kit (SDK) version, unique device identifier, and IP address,screen, audio, connectivity, storage and battery settings and information of devices,start/boot-up information, amount played/session length information, memory on device .
+
+when an end user launches the app, how long the end user plays the app, and in-app events, mobile device identifiers, geolocation, IP addresses, website cookie information and usage data. "</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Chartboost is an advertising service provided by Chartboost, Inc. (US)</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <span>Advertising Services</span>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a ><span>https://answers.chartboost.com/en-us/articles/200780269</span></a>
+                </p>
+            </td>
+
+        </tr>
+        
+        
+		
+        
+        
+        
+    </tbody>
+</table>
+
+
+</div></div></div></div>
+<script>
+    var textareaC = document.createElement('textarea');
+    textareaC.style.display = 'none'
+    textareaC.setAttribute('readonly', 'readonly'); //设置只读属性防止手机上弹出软键盘
+    //上面selectText函数返回值赋给textarea的value
+    document.body.appendChild(textareaC); //将textarea添加为body子元素
+    for (let i = 0; i <  document.querySelectorAll('p a').length; i++) {
+        document.querySelectorAll('p a')[i].addEventListener('touchstart',function () {
+
+        })
+        document.querySelectorAll('p a')[i].addEventListener('touchend',function () {
+            textareaC.value = this.children[0].textContent; // 选择对象
+            textareaC.select();
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            alert("The privacy policy link has been copied, please open it using your browser")
+        })
+    }
+
+
+</script>
+</body></html>

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+  <style>
+    body,
+    p,
+    img,
+    dl,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    form,
+    blockquote,
+    caption,
+    fieldset,
+    hr,
+    pre,
+    td,
+    th {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font: normal 12px/24px 'Microsoft Yahei', arial, sans-serif;
+      color: #333;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    img {
+      border: 0 none;
+    }
+
+    input,
+    select {
+      vertical-align: middle;
+      border: none
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    s,
+    em,
+    i {
+      font-style: normal;
+      text-decoration: none;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      content: '\20';
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .thide {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .clear {
+      clear: both;
+      height: 0;
+      overflow: hidden
+    }
+
+    /*frame*/
+    body {}
+
+    /* mob */
+    .wrap {
+      position: relative;
+      margin: 0 auto;
+      background-color: transparent;
+      overflow: hidden;
+    }
+
+    /* pc */
+
+    .pc .wrap {
+      position: relative;
+      max-width: 1920px;
+      min-width: 1000px;
+      margin: 0 auto;
+      background-color: transparent;
+    }
+
+
+
+    .container {
+      position: relative;
+      width: 1000px;
+      min-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /*nav*/
+    .nav {
+      position: relative;
+      height: 72px;
+      background-color: #f3f3f3;
+      z-index: 9;
+    }
+
+    .nav-icon {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 92px;
+      height: 92px;
+      background-color: #333;
+      border-radius: 20px;
+      border: #fff solid 4px;
+      overflow: hidden;
+    }
+
+    .nav-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .nav-gamename {
+      position: absolute;
+      top: 29px;
+      left: 130px;
+      font-size: 24px;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 29px;
+      right: 0;
+      font-size: 16px;
+    }
+
+    .nav-menu li {
+      float: left;
+    }
+
+    .nav-menu li a {
+      display: block;
+      width: 120px;
+      height: 38px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .nav-menu li a:hover {
+      border-bottom: 3px solid #4abbfc;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .nav-menu li.separate {
+      color: #000000;
+      margin: 5px 10px;
+      width: 1px;
+      height: 14px;
+    }
+
+    .nav-fixed {
+      position: fixed;
+    }
+
+
+
+    /*privacy*/
+    .commontext {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* pc */
+    .pc .commontext {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    .commontext-title {
+      padding-top: 5px;
+      line-height: 34px;
+      font-size: 18px;
+    }
+
+    .commontext-con {
+      color: #000000;
+      line-height: 160%;
+      font-size: 12px;
+      padding: 0 10px 10px 10px;
+      margin: 0px 15px 10px 15px;
+      box-sizing: border-box;
+    }
+
+    /* pc */
+    .pc .commontext-con {
+      color: rgb(0, 0, 0);
+      line-height: 30px;
+      font-size: 14px;
+    }
+
+    .commontext-con strong {
+      font-weight: bold;
+    }
+    td p {
+      text-indent: 4px !important;
+      text-align: center;
+    }
+    /* mob */
+    .commontext-con p {
+      text-indent: 28px;
+
+    }
+
+    /* pc */
+    .pc .commontext-con p {
+      text-indent: 28px;
+
+    }
+
+    /*footer*/
+    .footer {
+      position: relative;
+      background-color: #353535;
+      height: 250px;
+    }
+
+    .footer-arrow {
+      height: 14px;
+      padding-bottom: 41px;
+    }
+
+    .footer-arrow div {
+      border: #dcdcdc solid 14px;
+      border-bottom: none;
+      box-sizing: border-box;
+    }
+
+    .footer-arrow .a1 {
+      width: 70%;
+      position: absolute;
+      left: 0;
+      border-right-color: transparent !important;
+    }
+
+    .footer-arrow .a2 {
+      width: 30%;
+      position: absolute;
+      right: 0;
+      border-left-color: transparent !important;
+    }
+
+    .footer-contact {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 36px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .footer-contact-title {
+      font-size: 18px;
+    }
+
+    .footer-qrcode {
+      position: absolute;
+      right: 41px;
+      width: 110px;
+      height: 110px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    .footer-qrocde .qrcode {
+      width: 110px;
+      height: 110px;
+    }
+  </style>
+  <title>Privacy Policy</title>
+
+</head>
+
+<body>
+	<div id="openHref" style="display: none;position: absolute;width: 100%;height: 100%;z-index: 999999;    background: white;">
+		  <div  style="width:100%;height: 40px;box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
+		  z-index: 999999;background: white;" >
+		  <div id="returnHtml" style="
+		  margin-left: 18px;
+		  width: 36px;
+		  height: 36px;
+		  margin-top: 2px;
+		  " >
+		    <svg  t="1660549344957" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2361" width="36" height="36"><path d="M675.328 117.717333A425.429333 425.429333 0 0 0 512 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667c0-56.746667-11.093333-112-32.384-163.328a21.333333 21.333333 0 0 0-39.402667 16.341333A382.762667 382.762667 0 0 1 896 512c0 212.074667-171.925333 384-384 384S128 724.074667 128 512 299.925333 128 512 128c51.114667 0 100.8 9.984 146.986667 29.12a21.333333 21.333333 0 0 0 16.341333-39.402667z m-324.693333 373.013334l174.464-174.485334a21.141333 21.141333 0 0 0-0.192-29.973333 21.141333 21.141333 0 0 0-29.973334-0.192l-208.256 208.256a20.821333 20.821333 0 0 0-6.122666 14.976c0.042667 5.418667 2.133333 10.837333 6.314666 14.997333l211.178667 211.2a21.141333 21.141333 0 0 0 29.973333 0.213334 21.141333 21.141333 0 0 0-0.213333-29.973334l-172.629333-172.629333 374.997333 2.602667a20.693333 20.693333 0 0 0 21.034667-21.034667 21.482667 21.482667 0 0 0-21.333334-21.333333l-379.242666-2.624z" fill="#3D3D3D" p-id="2362"></path></svg>
+		  </div>
+		  </div>
+		  <iframe style="    border: none;
+    width: 100%;
+    float: left;
+    height: 100%;"></iframe>
+	</div>
+  <div class="wrap">
+    <!--privacypolicy-->
+    <div class="commontext">
+      <a name="section-privacypolicy"></a>
+      <h1 class="commontext-title" style="text-align:center;"></h1>
+      <div class="commontext-con">
+        <nbsp></nbsp>
+        <p style="text-align: center;text-indent: 0;"><strong>Privacy Policy</strong></p>
+        <nbsp></nbsp>
+        <p style="text-align: center;text-indent: 0;">Last update:&nbsp;[8 October&nbsp;2023]&nbsp;</p>
+        <p>[LePlus LIMITED]&nbsp;(&ldquo;LePlus&rdquo; or &ldquo;we&rdquo;) highly values your privacy. This privacy policy (the &ldquo;Policy&rdquo;) sets out how we collect, use and protect your personal data when you access, use and play games, features, content and services via websites, mobile applications and other channels or portals developed and managed by LePlus(the &ldquo;Services&rdquo;).</p>
+        <ol>
+          <li><strong>Who We Are</strong></li>
+        </ol>
+        <p>[LePlus LIMITED], a company incorporated under the laws of [China], is the controller (or a similar role) who is responsible for handling your personal data under this Policy.</p>
+        <ol start="2">
+          <li><strong>The Data We Collect </strong><strong>a</strong><strong>bout You</strong>
+            <ul>
+              <li>We collect both personal and non-personal data when you useour Services 。Personal data means any information relating to an identified or identifiable natural person. An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier of that natural person.</li>
+              <li>We collect the following types of data for the purposes stated below:</li>
+            </ul>
+          </li>
+        </ol>
+        <table border="1px solid #e0e0e0"   style="
+    word-wrap: break-word;
+    border-collapse: collapse;">
+          <tbody >
+          <tr>
+            <td width="28">
+              <p><strong><strong>N</strong></strong><strong><strong>o.</strong></strong></p>
+            </td>
+            <td width="169">
+              <p><strong><strong>What we collect</strong></strong></p>
+            </td>
+            <td width="193">
+              <p><strong><strong>How we use it</strong></strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(1) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Google AID</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Analytics, fraud prevention, security and compliance</p>
+              <p>&nbsp;&nbsp;App functionality</p>
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(2) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Android ID</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Analytics, fraud prevention, security and compliance</p>
+              <p>&nbsp;&nbsp;App functionality</p>
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(3) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;IDFA</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Analytics, fraud prevention, security and compliance</p>
+              <p>&nbsp;&nbsp;App functionality</p>
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(4) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;IDFV</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Analytics, fraud prevention, security and compliance</p>
+              <p>&nbsp;&nbsp;App functionality</p>
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(5) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;MAC</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Analytics, fraud prevention, security and compliance</p>
+              <p>&nbsp;&nbsp;App functionality</p>
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(6) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;IP address</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Analytics, fraud prevention, security and compliance</p>
+              <p>&nbsp;&nbsp;App functionality</p>
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(7) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;CPU</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Game performance optimization</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(8) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Screen size</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Game performance optimization</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(9) &nbsp;</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Memory size</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Game performance optimization</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(10)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Hard disk size</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Game performance optimization</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(11)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Device manufacturer</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(12)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Network Status</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Game performance optimization</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(13)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Device Country</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(14)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Device Language</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(15)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Operating System</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Game performance optimization</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(16)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Device Time Zone</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Advertising and marketing</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="28">
+              <p>(17)</p>
+            </td>
+            <td width="169">
+              <p>&nbsp;&nbsp;Device Model</p>
+            </td>
+            <td width="193">
+              <p>&nbsp;&nbsp;Game performance optimization</p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <ol start="3">
+          <li><strong>Special Categories of Personal Data</strong>
+            <ul>
+              <li>Certain categories of personal data, such as details about your race or ethnicity, religious or philosophical beliefs and so on, are considered more sensitive than other categories of personal data in certain jurisdictions and require a higher level of protection.</li>
+              <li>Toclarify, our Services do not collect any types of those special categories of personal data.</li>
+            </ul>
+          </li>
+          <li><strong>How Your Personal Data </strong><strong>is</strong><strong>Collected</strong></li>
+        </ol>
+        <p>We may&nbsp;collect your&nbsp;personal&nbsp;data through&nbsp;our Services, or by post, phone, email or other means you choose to interact with us.</p>
+        <ol start="5">
+          <li><strong>Legal Basis for Collection and Use of Personal Data</strong></li>
+        </ol>
+        <p>We only process your personal data where this is a legal basis permitted by the applicable law. The legal basis will depend on the context and purpose for which we collect and use your data, which may include:</p>
+        <ul>
+          <li>Consent: certain data will be collected when you have given us informed consent. You may withdraw your consent at any time but this will not affect the validity of the processing activities prior to the withdrawal.</li>
+          <li>Contractual necessity: it is necessary for us to collect and process certain data to enable us to enter into a contract with you and perform our contractual obligations.</li>
+          <li>Fulfilment of legal obligation: we may be required by the applicable law to collect and use your personal data to comply with our legal obligations.</li>
+          <li>Legitimate interests: in certain jurisdictions we may rely on legitimate interests to collect and use your personal data to operate and improve our business.</li>
+          <li>Other: we may also collect and use your personal data based on other legal bases under the applicable law.</li>
+        </ul>
+        <ol start="6">
+          <li><strong>Cookies, SDK and Similar Technologies</strong>
+            <ul>
+              <li>Our Services use cookies, SDK and similar technologies to deliver essential and additional functions. Please see [<a id="SDK"  style="cursor: pointer" hrefIfream="sdksus.html"><u>SDK List</u></a>]for&nbsp;more information on the types of SDKs we incorporate into our mobile applications.</li>
+              <li>The information collected by the SDKs are for the purposes of:
+                <ul>
+                  <li>providing and improving our Services;</li>
+                  <li>analyzing how our Services are used by users;</li>
+                  <li>displaying and running in-app advertisements;</li>
+                  <li>studying and analyzing the functionality and performance of the Services and activities related to the Services;</li>
+                  <li>protecting the Services and usersfrom fraud, misuse and unlawful use of the Services&rsquo; and related data and assets.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>We do not have access to the information collected by the SDKs.</p>
+        <ol start="7">
+          <li><strong>Third-party Links</strong></li>
+        </ol>
+        <p>Our Services may include links to third-party websites, plug-ins and applications. Clicking on those links may allow you to visit websites and applications of third parties. Please read the privacy policy of the third-party websites, plug-ins and applications you visit to know how they collect and use your personal data.</p>
+        <ol start="8">
+          <li><strong>Disclosure</strong>
+            <ul>
+              <li>We will not disclose your personal data to third parties unless we have obtained your consent or there are other legal bases for such disclosure.</li>
+              <li>We may engage a data processor (and/or sub-processor) to process your personal data for the purposes in this Policy, in which case we will request the data processor (and/or sub-processor) to keep your personal data in strict confidence and only process data to the extent it is necessary to perform its contractual or statutory obligations.</li>
+              <li>We may disclose your personal data to third parties to whom we may choose to sell, transfer or merge parts of our business or our assets, in which case the new owners will assume all our rights and obligations in this Policy.</li>
+              <li>We may also disclose your personal data for the purposes of national security, law enforcement, or public interests.</li>
+            </ul>
+          </li>
+          <li><strong>International Transfer of Data</strong>
+            <ul>
+              <li>We may choose to store your personal data on a local server or a server located in a foreign country depending upon the IT configurations of our websites and mobile applications, which may be adjusted from time to time.</li>
+              <li>Where the transfer of your personal data to a server located in a foreign country satisfies the definition of international transfer or cross-border transfer of personal data under the applicable law, we will determine the legal basis for the transfer and take appropriate security measures to ensure a level of protection as required under the applicable law.</li>
+            </ul>
+          </li>
+          <li><strong>Data Retention</strong></li>
+        </ol>
+        <p>We will only retain your personal data for as long as reasonably necessary to fulfil the purposes set out in this Policy. We will either delete or anonymize your personal data when it is no longer required to satisfy the purposes set out in this Policy.</p>
+        <ol start="11">
+          <li><strong>Your Legal Rights</strong>
+            <ul>
+              <li>You may have certain legal rights in relation to processing of your personal data, which may include:</li>
+            </ul>
+          </li>
+        </ol>
+        <ul>
+          <li>Access right: you may request access to your personal data in our possession.</li>
+          <li>Rectification right: you may request us to correct your personal data if it is inaccurate.</li>
+          <li>Erasure right: you may request us to delete your personal data.</li>
+          <li>Restriction right: you may request us to restrict how we process your personal data.</li>
+          <li>Portability right: you may request us to help you transfer your personal data to other entities.</li>
+          <li>Withdrawal of consent: you may withdraw your consent at any time.</li>
+          <li>Right to complain and report: you have the right to complain to the relevant supervisory authority.
+            <ul>
+              <li>The above rights may only apply in limited circumstances under the applicable law and if we decide not to respond to your claim for the above rights, we will explain reasons.</li>
+            </ul>
+          </li>
+        </ul>
+        <ol start="12">
+          <li><strong>Children&rsquo;s Data</strong>
+            <ul>
+              <li>Our Services are designedand&nbsp;provided to users of various age groups. We will not collect personal data from any users who are under the age of 13. If parents or legal guardians&nbsp;suspect that their children, under the age of 13, have provided us with personal data inadvertently, they may request such personal data be removed by contacting us at [jiaoheng20@gmail.com].</li>
+              <li>Users who are between 13 and 18 years old (or the relevant age defined as a minor in the respective jurisdiction) should seek the consent of their parents or legal guardians before using our Services.</li>
+            </ul>
+          </li>
+          <li><strong>Data Security</strong></li>
+        </ol>
+        <p>We are committed to keeping your personal data safe. We take reasonable and appropriate administrative, technical, organizational, and physical security and risk management measures in accordance with applicable laws to ensure that your personal data is adequately protected against accidental or unlawful destruction, damage, loss or alteration, unauthorized or unlawful access, disclosure or misuse, and all other unlawful forms of processing of your personal data in our possession.</p>
+        <ol start="14">
+          <li><strong>Changes to this Policy</strong>
+            <ul>
+              <li>This Policy may be changed from time to time.</li>
+              <li>If we change anything important about this Policy (e.g., the type of personal data we collect), we will provide a prominent link together with the updated policy for your reference onour Services.</li>
+            </ul>
+          </li>
+          <li><strong>Contact Us</strong></li>
+        </ol>
+        <p>If you have any questions about this Policy, including any requests to exercise your legal rights, please contact our data protection department at [jiaoheng20@gmail.com].</p>
+        <p>&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;</p>
+        <div style="position: relative;">
+          <div style="position:absolute;left:50%;top: 50%;transform: translate(-50%,-50%);width:100px;height:36px;background: #5b8efb;border-radius: 10px;">
+            <a  id="privacyusHref" hrefifream="serviceus.html" style="    text-align: center;
+            display: block;
+            height: 100%;
+            line-height: 36px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;">Terms of Use</a>
+          </div>
+
+        </div>
+        <p>&nbsp;&nbsp;</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- 判断设备 -->
+  <script type="text/javascript">
+    window.addEventListener('message',function (res) {
+
+      if(res.data == 'ret'){
+        document.body.style.overflow = 'auto'
+        document.getElementById('openHref').style.display = 'none'
+        document.getElementById('openHref').children[1].src = ''
+      }
+    })
+    document.getElementById('SDK').addEventListener('touchstart',function(){
+
+    },false)
+    document.getElementById('SDK').addEventListener('touchend',function(){
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      document.body.style.overflow = 'hidden'
+      document.getElementById('openHref').style.display = 'block'
+      document.getElementById('openHref').children[1].src =this.getAttribute('hrefifream')
+    },false)
+    document.getElementById('SDK').addEventListener('click',function(){
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      document.body.style.overflow = 'hidden'
+      document.getElementById('openHref').style.display = 'block'
+      document.getElementById('openHref').children[1].src =this.getAttribute('hrefifream')
+    },false)
+      document.getElementById('privacyusHref').addEventListener('touchstart',function(){
+
+      },false)
+      document.getElementById('privacyusHref').addEventListener('touchend',function(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        document.body.style.overflow = 'hidden'
+        document.getElementById('openHref').style.display = 'block'
+        document.getElementById('openHref').children[1].src =this.getAttribute('hrefifream')
+      },false)
+    document.getElementById('privacyusHref').addEventListener('click',function(){
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      document.body.style.overflow = 'hidden'
+      document.getElementById('openHref').style.display = 'block'
+      document.getElementById('openHref').children[1].src =this.getAttribute('hrefifream')
+    },false)
+
+	  document.getElementById('returnHtml').addEventListener('touchstart',function(){
+
+	  },false)
+    document.getElementById('returnHtml').addEventListener('click',function(){
+      document.body.style.overflow = 'auto'
+      document.getElementById('openHref').style.display = 'none'
+      document.getElementById('openHref').children[1].src = ''
+    },false)
+	  document.getElementById('returnHtml').addEventListener('touchend',function(){
+			document.body.style.overflow = 'auto'
+			document.getElementById('openHref').style.display = 'none'
+			document.getElementById('openHref').children[1].src = ''
+		},false)
+
+    function browserRedirect() {
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        //移动设备
+      } else {
+        //pc
+        document.getElementsByTagName('body')[0].className = 'pc'; //设置为新的
+      }
+    }
+
+    browserRedirect();
+  </script>
+
+
+
+
+
+</body></html>
