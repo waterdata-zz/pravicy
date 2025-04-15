@@ -349,4 +349,10 @@ opera.com, pub5959307917824, RESELLER, 55a0c5fd61378de3
 contextweb.com, 561913, RESELLER, 89ff185a4c4e857c
 yieldmo.com, 2807970144171533194, RESELLER
 inmobi.com, 3a4f7da341dd490cbb7dde02b126275e, RESELLER, 83e75a7ae333ca9d
+eskimi.com, 2020000104, RESELLER
+appnexus.com,15670, RESELLER
+rubiconproject.com, 26250, RESELLER, 0bfd66d529a55807
+pubmatic.com, 162270, RESELLER, 5d62403b186f2ace
+pubmatic.com, 163963, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 27386, RESELLER, 0bfd66d529a55807
 bigo.sg, 23166533, DIRECT
