@@ -1,3 +1,5 @@
+google.com, pub-8227141223710788, DIRECT, f08c47fec0942fa0
+
 inmobi.com, c443ac51365b4ceabe214c146d0f2534, DIRECT, 83e75a7ae333ca9d
 rubiconproject.com, 11726, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 12266, RESELLER, 0bfd66d529a55807
@@ -9015,5 +9017,3 @@ zmaticoo.com,114490,RESELLER
 zmaticoo.com,5135063,RESELLER
 zmaticoo.com,5135224,RESELLER
 zoomd.com,88478941,RESELLER
-
-google.com, pub-8227141223710788, DIRECT, f08c47fec0942fa0
